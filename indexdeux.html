@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculette</title>
+
+    <style type="text/css">
+        @font-face {
+            font-family: maFont;
+            src: url(calculator/Calculator.ttf);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .bouton {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin: 4;
+            color: blueviolet;
+            border-radius: 2px 2px 2px 2px;
+            /* background-color: darkgray; */
+            cursor: pointer;
+            border-style: none;
+        }
+
+        .textview {
+            width: 205px;
+            height: 60px;
+            font-size: 25px;
+            font-family: maFont;
+            color: greenyellow;
+            background-color: black;
+
+        }
+
+        .main {
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            text-align: rigth;
+        }
+        
+        /* table {
+            border-collapse:collapse;
+        } */
+    </style>
+
+
+
+    <script type="text/javascript">
+        function insert(num) {
+            document.form.textview.value = document.form.textview.value + num
+        }
+
+        function egal() {
+            var exp = document.form.textview.value;
+            if (exp) {
+                document.form.textview.value = eval(exp)/*La fonction eval () évalue ou exécute un argument.*/
+            }
+        }
+        /*fonction effacer tout*/
+        function ef() {
+            document.form.textview.value = "";
+        }
+
+        /*fonction effacer la derniere frappe*/
+        function r() {
+            var exp = document.form.textview.value;
+            document.form.textview.value = exp.substring(0, exp.length - 1);
+        }
+        
+
+    </script>
+</head>
+
+<body>
+
+
+    <div class="main">
+        <form name="form">
+            <input class="textview" name="textview" maxlength="20">
+        </form>
+
+        <table>
+            <tr>
+                <td>
+                    <input type="button" class="bouton" value="CE" onclick='ef()'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="^^" onclick='r()'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="/" onclick='insert("/")'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="*" onclick='insert("*")'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="bouton" value="7" onclick='insert("7")'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="8" onclick='insert("8" )'>
+                </td>
+
+                <td>
+                    <input type="button" class="bouton" value="9" onclick='insert("9")'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="-" onclick='insert("-")'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="bouton" value="4" onclick='insert("4")'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="5" onclick='insert("5")'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="6" onclick='insert("6")'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="+" onclick='insert("+")'>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="bouton" value="1" onclick='insert("1")'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="2" onclick='insert("2")'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="3" onclick='insert("3")'>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    <input type="button" class="bouton" value="0" onclick='insert("0")'>
+                </td>
+                <td>
+                    <input type="button" class="bouton" value="." onclick='insert(".")'>
+                </td>
+                <td rowspan="2">
+                    <input type="button" class="bouton" value="=" onclick='egal()'>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

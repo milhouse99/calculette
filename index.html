@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculette</title>
+    <style type="text/css">
+        .button {
+            width: 40px;
+            height: 30px;
+            position: relative;
+        }
+
+        .display {
+            position: absolute;
+            width: 35px;
+            height: 50px;
+        }
+    </style>
+
+
+
+<script type="text/javascript" src="js.js"></script>
+</head>
+
+<body>
+    <div align="center">
+        <div class="display">
+            <input type="text" size="15" id="display" readonly>
+            <div class="keys">
+                <p>
+                    <input type="button" class="button" value="1" onclick='Math("1")'>
+                    <input type="button" class="button" value="2" onclick='Math("2")'>
+                    <input type="button" class="button" value="3" onclick='Math("3")'>
+                    <input type="button" class="button" value="/" onclick='Math("/")'>
+                </p>
+                <p>
+                    <input type="button" class="button" value="4" onclick='Math("4")'>
+                    <input type="button" class="button" value="5" onclick='Math("5")'>
+                    <input type="button" class="button" value="6" onclick='Math("6")'>
+                    <input type="button" class="button" value="*" onclick='Math("*")'>
+                </p>
+                <p>
+                    <input type="button" class="button" value="7" onclick='Math("7")'>
+                    <input type="button" class="button" value="8" onclick='Math("8" )'>
+                    <input type="button" class="button" value="9" onclick='Math("9")'>
+                    <input type="button" class="button" value="-" onclick='Math("-")'>
+                </p>
+                <p>
+                    <input type="button" class="button" value="0" onclick='Math("0")'>
+                    <input type="button" class="button" value="CE" onclick='Math("CE")'>
+                    <input type="button" class="button" value="=" onclick='Math("=")'>
+                    <input type="button" class="button" value="+" onclick='Math("+")'>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+</body>
+
+</html>
